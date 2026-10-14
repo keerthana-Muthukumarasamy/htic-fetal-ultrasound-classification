@@ -278,12 +278,3 @@ conditions, and benchmark scripts distinct when reporting comparisons.
 7.  Review CPU-thread and pipeline benchmark files for runtime
     optimization measurements.
 
-## Maintenance notes
-
--   This guide documents the inventory observed during project review.
-    Update it if files are added, removed, or moved.
--   Do not move files merely to match this guide; existing scripts may
-    depend on their current paths.
--   Do not describe model-only measurements as end-to-end performance if
-    they use preprocessed or synthetic inputs.
--   Keep held-out test evaluation distinct from validation experiments.

@@ -1,8 +1,6 @@
-# HTIC Fetal Ultrasound Classification & Model Optimization
+# Fetal Ultrasound Classification & Model Optimization
 
 **Assignment:** Deep Learning Model Optimization & Edge Deployment\
-**Institution:** Healthcare Technology Innovation Centre (HTIC), IIT
-Madras\
 **Model:** MobileNetV3-Large\
 **Optimized inference format:** FP16 ONNX\
 **Status:** Laptop CPU inference and benchmarking completed; edge-device
@@ -26,9 +24,7 @@ performance, model size, inference latency, and deployment practicality.
 
 Watch the recorded demonstrations of the inference workflow:
 
-**
-htic_fetal_ultrasound\docs\sample_inference_video
-**
+[View Demo Videos](https://github.com/keerthana-Muthukumarasamy/htic-fetal-ultrasound-classification/tree/main/docs/sample_inference_video)
 
 The demonstrations show the inference workflow on a laptop and through
 Docker. Refer to the source code and benchmark reports for
@@ -72,14 +68,14 @@ PyTorch autocasting and `GradScaler` on an NVIDIA Tesla T4 GPU. AMP uses
 lower-precision operations where appropriate and may help manage GPU
 memory consumption and training efficiency.
 
-  Metric                  AMP experiment
-  ----------------------- -----------------
-  GPU                     NVIDIA Tesla T4
-  Training duration       430.99 seconds
-  Training epochs         5
-  Peak GPU memory usage   786.2 MB
-  Validation accuracy     93.96%
-  Validation macro-F1     93.17%
+| Metric | AMP experiment |
+| --- | --- |
+| GPU | NVIDIA Tesla T4 |
+| Training duration | 430.99 seconds |
+| Training epochs | 5 |
+| Peak GPU memory usage | 786.2 MB |
+| Validation accuracy | 93.96% |
+| Validation macro-F1 | 93.17% |
 
 For comparison, the recorded FP32 baseline achieved 94.09% validation
 accuracy and 93.23% validation macro-F1.
@@ -120,11 +116,11 @@ optimized model among the evaluated configurations.
 The held-out test set contains 5,271 images from patients separated from
 the development pool.
 
-  Metric              FP32 PyTorch baseline   FP16 ONNX
-  ----------------- ----------------------- -----------
-  Test accuracy                    92.1647%    92.1836%
-  Test macro-F1                    91.1170%    91.1595%
-  Model file size                  16.05 MB     8.05 MB
+| Metric | FP32 PyTorch baseline | FP16 ONNX |
+| --- | ---: | ---: |
+| Test accuracy | 92.1647% | 92.1836% |
+| Test macro-F1 | 91.1170% | 91.1595% |
+| Model file size | 16.05 MB | 8.05 MB |
 
 The FP16 ONNX model is approximately **49.81% smaller** than the FP32
 model. The small differences in test accuracy and macro-F1 should be
@@ -136,12 +132,12 @@ intrinsically improves classification quality.
 The following model-only measurements were recorded on the laptop CPU
 using ONNX Runtime.
 
-  Metric                                   FP32 ONNX         FP16 ONNX
-  -------------------------------- ----------------- -----------------
-  Median model inference latency           4.6826 ms         4.4083 ms
-  Mean model inference latency             5.0691 ms         4.4409 ms
-  P95 model inference latency              7.3332 ms         4.9821 ms
-  Throughput                         197.28 images/s   225.18 images/s
+| Metric | FP32 ONNX | FP16 ONNX |
+| --- | ---: | ---: |
+| Median model inference latency | 4.6826 ms | 4.4083 ms |
+| Mean model inference latency | 5.0691 ms | 4.4409 ms |
+| P95 model inference latency | 7.3332 ms | 4.9821 ms |
+| Throughput | 197.28 images/s | 225.18 images/s |
 
 These are model-only benchmark measurements and exclude the full cost of
 image loading and preprocessing.
@@ -151,11 +147,11 @@ image loading and preprocessing.
 A separate pipeline profile measured image loading, preprocessing,
 inference, and postprocessing.
 
-  Metric                        FP32 pipeline   FP16 pipeline
-  --------------------------- --------------- ---------------
-  Median end-to-end latency         16.586 ms       17.026 ms
-  P95 end-to-end latency            21.944 ms       21.361 ms
-  Sampled peak process RSS          340.65 MB       345.56 MB
+| Metric | FP32 pipeline | FP16 pipeline |
+| --- | ---: | ---: |
+| Median end-to-end latency | 16.586 ms | 17.026 ms |
+| P95 end-to-end latency | 21.944 ms | 21.361 ms |
+| Sampled peak process RSS | 340.65 MB | 345.56 MB |
 
 In this profile, FP16 did not improve median end-to-end latency. These
 results demonstrate why model-only latency and full-pipeline latency
@@ -163,10 +159,10 @@ must be reported separately.
 
 ### INT8 Quantization Experiments
 
-  Configuration     Validation accuracy   Validation macro-F1
-  --------------- --------------------- ---------------------
-  Dynamic INT8                   72.12%                65.17%
-  Static INT8                    51.58%                27.75%
+| Configuration | Validation accuracy | Validation macro-F1 |
+| --- | ---: | ---: |
+| Dynamic INT8 | 72.12% | 65.17% |
+| Static INT8 | 51.58% | 27.75% |
 
 The tested INT8 configurations showed substantial accuracy degradation.
 They were not selected as the final inference model.

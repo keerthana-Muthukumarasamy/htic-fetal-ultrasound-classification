@@ -1,0 +1,21 @@
+{
+  "experiment": "ONNX static INT8 quantization - reduced range",
+  "source_model": "/content/drive/MyDrive/HTIC_FETAL_ULTRASOUND/artifacts/onnx/mobilenetv3_fetal_fp32.onnx",
+  "model_used_for_quantization": "/content/drive/MyDrive/HTIC_FETAL_ULTRASOUND/artifacts/experiments/onnx_static_int8/mobilenetv3_fetal_preprocessed.onnx",
+  "quantized_model": "/content/drive/MyDrive/HTIC_FETAL_ULTRASOUND/artifacts/experiments/onnx_static_int8/mobilenetv3_fetal_static_int8.onnx",
+  "calibration_manifest": "/content/drive/MyDrive/HTIC_FETAL_ULTRASOUND/artifacts/experiments/onnx_static_int8/calibration_manifest.json",
+  "calibration_image_count": 204,
+  "calibration_source_split": "Train=1 only",
+  "calibration_transform": "MobileNet_V3_Large_Weights.DEFAULT.transforms()",
+  "quantization_format": "QDQ",
+  "activation_type": "QUInt8",
+  "weight_type": "QInt8",
+  "per_channel_weights": true,
+  "calibration_method": "MinMax",
+  "reduce_range": true,
+  "graph_preprocessing_status": "completed",
+  "onnx_graph_validation": "passed",
+  "onnxruntime_load_test": "passed",
+  "fp32_size_mb": 16.049,
+  "static_int8_size_mb": 4.496
+}

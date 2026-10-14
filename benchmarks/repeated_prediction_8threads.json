@@ -1,0 +1,35 @@
+{
+  "experiment": "Repeated warmed single-image prediction",
+  "provider": "CPUExecutionProvider",
+  "threads": 8,
+  "warmup_iterations": 20,
+  "measurement_iterations": 100,
+  "image": "Patient00001_Plane1_13_of_15.png",
+  "image_loading": {
+    "mean_ms": 11.416,
+    "median_ms": 11.482,
+    "p95_ms": 12.368
+  },
+  "preprocessing": {
+    "mean_ms": 6.249,
+    "median_ms": 6.19,
+    "p95_ms": 7.082
+  },
+  "inference": {
+    "mean_ms": 4.722,
+    "median_ms": 4.669,
+    "p95_ms": 5.14
+  },
+  "postprocessing": {
+    "mean_ms": 0.114,
+    "median_ms": 0.111,
+    "p95_ms": 0.141
+  },
+  "end_to_end": {
+    "mean_ms": 22.509,
+    "median_ms": 22.623,
+    "p95_ms": 24.233
+  },
+  "predicted_class_index": 0,
+  "note": "Includes image loading, preprocessing, inference and postprocessing; excludes process startup and ONNX session construction."
+}

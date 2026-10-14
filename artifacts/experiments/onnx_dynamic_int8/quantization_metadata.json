@@ -1,0 +1,11 @@
+{
+  "experiment": "ONNX dynamic INT8 quantization",
+  "source_model": "/content/drive/MyDrive/HTIC_FETAL_ULTRASOUND/artifacts/onnx/mobilenetv3_fetal_fp32.onnx",
+  "quantized_model": "/content/drive/MyDrive/HTIC_FETAL_ULTRASOUND/artifacts/experiments/onnx_dynamic_int8/mobilenetv3_fetal_dynamic_int8.onnx",
+  "weight_type": "QInt8",
+  "quantization_method": "dynamic",
+  "onnx_graph_validation": "passed",
+  "fp32_size_mb": 16.049,
+  "dynamic_int8_size_mb": 4.222,
+  "size_reduction_percent": 73.69
+}

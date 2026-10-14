@@ -1,0 +1,39 @@
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Secrets and environment variables
+.env
+.env.*
+
+# Dataset images — do not upload the full dataset
+data/Images/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Keep ALL model artifacts:
+# .pth, .onnx, FP16, FP32, INT8, and experimental models are allowed.
+
+# Local inventory files
+file_inventory.csv
+project_inventory_windows.csv

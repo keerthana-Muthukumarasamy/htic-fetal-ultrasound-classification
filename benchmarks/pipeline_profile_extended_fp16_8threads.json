@@ -1,0 +1,45 @@
+{
+  "experiment": "Extended pipeline profiling",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "onnxruntime_version": "1.31.0",
+  "provider": "CPUExecutionProvider",
+  "cpu_threads": 8,
+  "graph_optimization": "ORT_ENABLE_ALL",
+  "unique_images": 50,
+  "measurement_rounds": 5,
+  "warmup_images": 10,
+  "image_loading": {
+    "mean_ms": 6.678,
+    "median_ms": 6.388,
+    "p95_ms": 10.121
+  },
+  "preprocessing": {
+    "mean_ms": 5.649,
+    "median_ms": 5.629,
+    "p95_ms": 6.543
+  },
+  "model_inference": {
+    "mean_ms": 4.849,
+    "median_ms": 4.775,
+    "p95_ms": 5.239
+  },
+  "postprocessing": {
+    "mean_ms": 0.127,
+    "median_ms": 0.124,
+    "p95_ms": 0.144
+  },
+  "end_to_end": {
+    "mean_ms": 17.311,
+    "median_ms": 17.026,
+    "p95_ms": 21.361
+  },
+  "process_rss_before_benchmark_mb": 323.49,
+  "process_peak_rss_observed_mb": 345.56,
+  "note": "RSS is sampled during the benchmark, not a guaranteed OS-level absolute peak. It includes Python, libraries, model runtime, and data.",
+  "example_prediction": {
+    "class_index": 0,
+    "class_name": "Other",
+    "confidence": 0.9455344080924988
+  }
+}

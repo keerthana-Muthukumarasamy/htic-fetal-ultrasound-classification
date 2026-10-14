@@ -1,0 +1,30 @@
+{
+  "experiment": "FP32 ONNX vs static INT8 ONNX CPU benchmark",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "provider": "CPUExecutionProvider",
+  "cpu_threads": 2,
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "warmup_iterations": 20,
+  "measured_iterations": 100,
+  "fp32_size_mb": 16.049,
+  "static_int8_size_mb": 4.496,
+  "fp32": {
+    "mean_latency_ms": 20.999,
+    "median_latency_ms": 22.819,
+    "p95_latency_ms": 28.637,
+    "throughput_images_per_second": 47.62
+  },
+  "static_int8": {
+    "mean_latency_ms": 36.026,
+    "median_latency_ms": 35.133,
+    "p95_latency_ms": 59.875,
+    "throughput_images_per_second": 27.76
+  },
+  "latency_speedup_mean": 0.583,
+  "benchmark_scope": "model-only; random input; no preprocessing"
+}

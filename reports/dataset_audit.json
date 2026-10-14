@@ -1,0 +1,57 @@
+{
+  "dataset_csv": "data\\FETAL_PLANES_DB_data.csv",
+  "image_directory": "data\\Images",
+  "row_count": 12400,
+  "column_names": [
+    "Image_name",
+    "Patient_num",
+    "Plane",
+    "Brain_plane",
+    "Operator",
+    "US_Machine",
+    "Train"
+  ],
+  "missing_values_by_column": {
+    "Image_name": 0,
+    "Patient_num": 0,
+    "Plane": 0,
+    "Brain_plane": 0,
+    "Operator": 0,
+    "US_Machine": 0,
+    "Train": 0
+  },
+  "duplicate_metadata_rows": 0,
+  "unique_patients": 1792,
+  "plane_class_counts": {
+    "Other": 4213,
+    "Fetal brain": 3092,
+    "Fetal thorax": 1718,
+    "Maternal cervix": 1626,
+    "Fetal femur": 1040,
+    "Fetal abdomen": 711
+  },
+  "brain_plane_counts": {
+    "Not A Brain": 9308,
+    "Trans-thalamic": 1638,
+    "Trans-cerebellum": 714,
+    "Trans-ventricular": 597,
+    "Other": 143
+  },
+  "train_column_value_counts": {
+    "1": 7129,
+    "0": 5271
+  },
+  "operator_counts": {
+    "Other": 3613,
+    "Op. 3": 3560,
+    "Op. 1": 2792,
+    "Op. 2": 2435
+  },
+  "ultrasound_machine_counts": {
+    "Voluson E6": 5862,
+    "Aloka": 5114,
+    "Voluson S10": 1082,
+    "Other": 342
+  },
+  "missing_image_files": 0
+}

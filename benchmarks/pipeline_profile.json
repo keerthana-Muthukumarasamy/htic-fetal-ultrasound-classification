@@ -1,0 +1,37 @@
+{
+  "experiment": "Laptop end-to-end pipeline profile",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "onnxruntime_version": "1.31.0",
+  "provider": "CPUExecutionProvider",
+  "cpu_threads": 8,
+  "image": "Patient00001_Plane1_10_of_15.png",
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "warmup_iterations": 10,
+  "measured_iterations": 100,
+  "image_loading": {
+    "mean_ms": 8.18,
+    "median_ms": 8.044,
+    "p95_ms": 8.872
+  },
+  "preprocessing": {
+    "mean_ms": 6.633,
+    "median_ms": 6.217,
+    "p95_ms": 9.298
+  },
+  "model_inference": {
+    "mean_ms": 4.958,
+    "median_ms": 4.838,
+    "p95_ms": 5.541
+  },
+  "end_to_end": {
+    "mean_ms": 19.78,
+    "median_ms": 19.27,
+    "p95_ms": 23.569
+  }
+}

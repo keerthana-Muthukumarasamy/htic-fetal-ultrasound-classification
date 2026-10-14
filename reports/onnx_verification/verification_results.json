@@ -1,0 +1,18 @@
+{
+  "experiment": "FP32 ONNX export verification",
+  "onnx_model": "artifacts/onnx/mobilenetv3_fetal_fp32.onnx",
+  "verification_method": "Compare PyTorch and ONNX Runtime logits for the same random input",
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "maximum_absolute_logit_difference": 1.24e-05,
+  "pytorch_predicted_class_index": 0,
+  "onnx_predicted_class_index": 0,
+  "predictions_match": true,
+  "onnx_graph_validation": "Passed",
+  "interpretation": "Outputs are numerically close for the tested input. This is a single-input consistency check, not a full-dataset accuracy evaluation.",
+  "recorded_at_utc": "2026-10-12T15:35:39.767379+00:00"
+}

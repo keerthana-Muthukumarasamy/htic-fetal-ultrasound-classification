@@ -1,0 +1,172 @@
+{
+  "FP32 ONNX": {
+    "validation_images": 1456,
+    "accuracy": 0.9409340659340659,
+    "macro_f1": 0.9323095359049419,
+    "classification_report": {
+      "Other": {
+        "precision": 0.9525423728813559,
+        "recall": 0.9168026101141925,
+        "f1-score": 0.9343308395677473,
+        "support": 613.0
+      },
+      "Fetal brain": {
+        "precision": 0.9895470383275261,
+        "recall": 0.9759450171821306,
+        "f1-score": 0.9826989619377162,
+        "support": 291.0
+      },
+      "Fetal thorax": {
+        "precision": 0.8734693877551021,
+        "recall": 0.9727272727272728,
+        "f1-score": 0.9204301075268817,
+        "support": 220.0
+      },
+      "Maternal cervix": {
+        "precision": 0.9819277108433735,
+        "recall": 0.9939024390243902,
+        "f1-score": 0.9878787878787879,
+        "support": 164.0
+      },
+      "Fetal femur": {
+        "precision": 0.8518518518518519,
+        "recall": 0.8518518518518519,
+        "f1-score": 0.8518518518518519,
+        "support": 108.0
+      },
+      "Fetal abdomen": {
+        "precision": 0.9166666666666666,
+        "recall": 0.9166666666666666,
+        "f1-score": 0.9166666666666666,
+        "support": 60.0
+      },
+      "accuracy": 0.9409340659340659,
+      "macro avg": {
+        "precision": 0.9276675047209794,
+        "recall": 0.9379826429277509,
+        "f1-score": 0.9323095359049419,
+        "support": 1456.0
+      },
+      "weighted avg": {
+        "precision": 0.9423530718502864,
+        "recall": 0.9409340659340659,
+        "f1-score": 0.9410830683014696,
+        "support": 1456.0
+      }
+    }
+  },
+  "Dynamic INT8": {
+    "validation_images": 1456,
+    "accuracy": 0.7211538461538461,
+    "macro_f1": 0.6516655627565302,
+    "classification_report": {
+      "Other": {
+        "precision": 0.6292629262926293,
+        "recall": 0.933115823817292,
+        "f1-score": 0.7516425755584757,
+        "support": 613.0
+      },
+      "Fetal brain": {
+        "precision": 0.99375,
+        "recall": 0.5463917525773195,
+        "f1-score": 0.70509977827051,
+        "support": 291.0
+      },
+      "Fetal thorax": {
+        "precision": 0.8051948051948052,
+        "recall": 0.2818181818181818,
+        "f1-score": 0.4175084175084175,
+        "support": 220.0
+      },
+      "Maternal cervix": {
+        "precision": 0.9873417721518988,
+        "recall": 0.9512195121951219,
+        "f1-score": 0.968944099378882,
+        "support": 164.0
+      },
+      "Fetal femur": {
+        "precision": 0.6376811594202898,
+        "recall": 0.8148148148148148,
+        "f1-score": 0.7154471544715447,
+        "support": 108.0
+      },
+      "Fetal abdomen": {
+        "precision": 0.9285714285714286,
+        "recall": 0.21666666666666667,
+        "f1-score": 0.35135135135135137,
+        "support": 60.0
+      },
+      "accuracy": 0.7211538461538461,
+      "macro avg": {
+        "precision": 0.8303003486051753,
+        "recall": 0.6240044586482328,
+        "f1-score": 0.6516655627565302,
+        "support": 1456.0
+      },
+      "weighted avg": {
+        "precision": 0.7819850154703486,
+        "recall": 0.7211538461538461,
+        "f1-score": 0.6971490331099316,
+        "support": 1456.0
+      }
+    },
+    "agreement_with_fp32": 0.7232142857142857
+  },
+  "Static INT8": {
+    "validation_images": 1456,
+    "accuracy": 0.5157967032967034,
+    "macro_f1": 0.27747895981135345,
+    "classification_report": {
+      "Other": {
+        "precision": 0.48303078137332284,
+        "recall": 0.99836867862969,
+        "f1-score": 0.6510638297872341,
+        "support": 613.0
+      },
+      "Fetal brain": {
+        "precision": 1.0,
+        "recall": 0.003436426116838488,
+        "f1-score": 0.00684931506849315,
+        "support": 291.0
+      },
+      "Fetal thorax": {
+        "precision": 0.45054945054945056,
+        "recall": 0.18636363636363637,
+        "f1-score": 0.26366559485530544,
+        "support": 220.0
+      },
+      "Maternal cervix": {
+        "precision": 1.0,
+        "recall": 0.5914634146341463,
+        "f1-score": 0.7432950191570882,
+        "support": 164.0
+      },
+      "Fetal femur": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 108.0
+      },
+      "Fetal abdomen": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 60.0
+      },
+      "accuracy": 0.5157967032967034,
+      "macro avg": {
+        "precision": 0.4889300386537956,
+        "recall": 0.2966053592907185,
+        "f1-score": 0.27747895981135345,
+        "support": 1456.0
+      },
+      "weighted avg": {
+        "precision": 0.5839414478727514,
+        "recall": 0.5157967032967034,
+        "f1-score": 0.3990398985950795,
+        "support": 1456.0
+      }
+    },
+    "agreement_with_fp32": 0.5020604395604396
+  }
+}

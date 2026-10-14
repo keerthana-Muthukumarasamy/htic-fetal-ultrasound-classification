@@ -1,0 +1,30 @@
+{
+  "experiment": "FP32 model-only CPU benchmark",
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "warmup_iterations": 20,
+  "measured_iterations": 100,
+  "cpu_threads": 2,
+  "provider": "CPUExecutionProvider",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "torch_version": "2.11.0+cu130",
+  "onnxruntime_version": "1.31.0",
+  "onnx_model_size_mb": 16.049,
+  "pytorch_cpu": {
+    "mean_latency_ms": 31.811,
+    "median_latency_ms": 30.425,
+    "p95_latency_ms": 37.813,
+    "throughput_images_per_second": 31.44
+  },
+  "onnxruntime_cpu": {
+    "mean_latency_ms": 7.572,
+    "median_latency_ms": 7.296,
+    "p95_latency_ms": 8.864,
+    "throughput_images_per_second": 132.06
+  },
+  "onnx_speedup_vs_pytorch_mean": 4.201
+}

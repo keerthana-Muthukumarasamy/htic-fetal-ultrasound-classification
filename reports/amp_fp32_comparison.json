@@ -1,0 +1,21 @@
+{
+  "experiment": "FP32 baseline vs AMP FP16 training",
+  "baseline": {
+    "best_epoch": 5,
+    "best_val_accuracy": 0.9409340659340659,
+    "best_val_macro_f1": 0.9323095359049419,
+    "training_duration_seconds": null,
+    "peak_gpu_memory_mb": null
+  },
+  "amp_fp16": {
+    "best_epoch": 5,
+    "best_val_accuracy": 0.9395604395604396,
+    "best_val_macro_f1": 0.9316836396635614,
+    "training_duration_seconds": 430.9927377309996,
+    "peak_gpu_memory_mb": 786.2
+  },
+  "validation_macro_f1_difference_amp_minus_fp32": -0.0006258962413805413,
+  "validation_accuracy_difference_amp_minus_fp32": -0.0013736263736263687,
+  "held_out_test_evaluated_for_amp": false,
+  "interpretation": "AMP achieved validation metrics close to the FP32 baseline. Training speedup cannot be determined because comparable baseline training duration was not recorded."
+}

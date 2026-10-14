@@ -1,0 +1,24 @@
+# ==============================================================================
+# HTIC Fetal Ultrasound Classification & Model Optimization
+# Environment Dependencies
+# ==============================================================================
+
+# Core Deep Learning Framework & Vision Transforms
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Inference Engine & Model Optimization
+onnx>=1.14.0
+onnxruntime>=1.16.0
+onnxconverter-common>=1.13.0
+
+# Image Processing & Linear Algebra
+numpy>=1.24.0
+Pillow>=9.5.0
+opencv-python-headless>=4.7.0
+
+# Data Science, Stratified Partitioning & Metrics
+pandas>=2.0.0
+openpyxl>=3.1.0
+scikit-learn>=1.2.0
+scipy>=1.10.0

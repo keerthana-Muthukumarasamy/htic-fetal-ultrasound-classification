@@ -1,0 +1,10 @@
+ONNX FP32 VERIFICATION REPORT
+================================
+
+ONNX graph validation: Passed
+Maximum absolute logit difference: 0.00001240
+PyTorch predicted class index: 0
+ONNX predicted class index: 0
+Predictions match: True
+
+Conclusion: Numerical consistency was confirmed for the tested random input. A full-dataset evaluation has not been established by this check.

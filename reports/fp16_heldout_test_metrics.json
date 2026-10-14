@@ -1,0 +1,122 @@
+{
+  "model": "MobileNetV3-Large FP16 ONNX",
+  "split": "held-out test (Train == 0)",
+  "test_images": 5271,
+  "test_patients": 896,
+  "accuracy": 0.921836463669133,
+  "macro_f1": 0.9115953882874434,
+  "elapsed_seconds": 991.0831761249992,
+  "images_per_second": 5.318423445153105,
+  "provider": [
+    "CPUExecutionProvider"
+  ],
+  "class_names": [
+    "Other",
+    "Fetal brain",
+    "Fetal thorax",
+    "Maternal cervix",
+    "Fetal femur",
+    "Fetal abdomen"
+  ],
+  "classification_report": {
+    "Other": {
+      "precision": 0.9142091152815014,
+      "recall": 0.8461538461538461,
+      "f1-score": 0.8788659793814433,
+      "support": 1612.0
+    },
+    "Fetal brain": {
+      "precision": 0.9904175222450377,
+      "recall": 0.983016304347826,
+      "f1-score": 0.9867030344357314,
+      "support": 1472.0
+    },
+    "Fetal thorax": {
+      "precision": 0.8464619492656876,
+      "recall": 0.9606060606060606,
+      "f1-score": 0.8999290276792051,
+      "support": 660.0
+    },
+    "Maternal cervix": {
+      "precision": 0.993798449612403,
+      "recall": 0.993798449612403,
+      "f1-score": 0.993798449612403,
+      "support": 645.0
+    },
+    "Fetal femur": {
+      "precision": 0.8372513562386981,
+      "recall": 0.8835877862595419,
+      "f1-score": 0.8597957288765088,
+      "support": 524.0
+    },
+    "Fetal abdomen": {
+      "precision": 0.8355795148247979,
+      "recall": 0.8659217877094972,
+      "f1-score": 0.850480109739369,
+      "support": 358.0
+    },
+    "accuracy": 0.921836463669133,
+    "macro avg": {
+      "precision": 0.902952984578021,
+      "recall": 0.9221807057815292,
+      "f1-score": 0.9115953882874434,
+      "support": 5271.0
+    },
+    "weighted avg": {
+      "precision": 0.9237567349782176,
+      "recall": 0.921836463669133,
+      "f1-score": 0.9218586273835219,
+      "support": 5271.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1364,
+      14,
+      93,
+      3,
+      88,
+      50
+    ],
+    [
+      6,
+      1447,
+      12,
+      1,
+      2,
+      4
+    ],
+    [
+      22,
+      0,
+      634,
+      0,
+      0,
+      4
+    ],
+    [
+      3,
+      0,
+      0,
+      641,
+      0,
+      1
+    ],
+    [
+      57,
+      0,
+      2,
+      0,
+      463,
+      2
+    ],
+    [
+      40,
+      0,
+      8,
+      0,
+      0,
+      310
+    ]
+  ]
+}

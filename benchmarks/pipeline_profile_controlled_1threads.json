@@ -1,0 +1,32 @@
+{
+  "experiment": "Controlled laptop pipeline benchmark",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "onnxruntime_version": "1.31.0",
+  "provider": "CPUExecutionProvider",
+  "cpu_threads": 1,
+  "graph_optimization": "ORT_ENABLE_ALL",
+  "unique_images": 50,
+  "measurement_rounds": 5,
+  "warmup_images": 10,
+  "image_loading": {
+    "mean_ms": 6.213,
+    "median_ms": 5.906,
+    "p95_ms": 10.169
+  },
+  "preprocessing": {
+    "mean_ms": 5.808,
+    "median_ms": 5.497,
+    "p95_ms": 6.319
+  },
+  "model_inference": {
+    "mean_ms": 14.487,
+    "median_ms": 14.822,
+    "p95_ms": 16.061
+  },
+  "end_to_end": {
+    "mean_ms": 26.515,
+    "median_ms": 25.84,
+    "p95_ms": 32.044
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "experiment": "ONNX Runtime batch inference benchmark",
+  "model": "E:\\htic_fetal_ultrasound\\artifacts\\onnx\\mobilenetv3_fetal_fp32_dynamic_batch.onnx",
+  "provider": "CPUExecutionProvider",
+  "threads": 8,
+  "input_shape_per_image": [
+    3,
+    224,
+    224
+  ],
+  "preprocessing_included_in_timing": false,
+  "results": [
+    {
+      "batch_size": 1,
+      "threads": 8,
+      "images_per_repeat": 128,
+      "repeats": 30,
+      "median_ms_per_image": 4.678,
+      "throughput_images_per_second": 213.76,
+      "median_batch_call_ms": 4.557
+    },
+    {
+      "batch_size": 4,
+      "threads": 8,
+      "images_per_repeat": 128,
+      "repeats": 30,
+      "median_ms_per_image": 3.601,
+      "throughput_images_per_second": 277.72,
+      "median_batch_call_ms": 14.284
+    },
+    {
+      "batch_size": 8,
+      "threads": 8,
+      "images_per_repeat": 128,
+      "repeats": 30,
+      "median_ms_per_image": 3.622,
+      "throughput_images_per_second": 276.11,
+      "median_batch_call_ms": 28.773
+    },
+    {
+      "batch_size": 16,
+      "threads": 8,
+      "images_per_repeat": 128,
+      "repeats": 30,
+      "median_ms_per_image": 3.77,
+      "throughput_images_per_second": 265.28,
+      "median_batch_call_ms": 60.03
+    }
+  ]
+}

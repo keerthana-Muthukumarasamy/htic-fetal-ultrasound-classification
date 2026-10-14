@@ -1,0 +1,19 @@
+{
+    "experiment": "FP32 vs FP16 ONNX Validation",
+    "dataset_split": "Validation",
+    "validation_images": 1456,
+    "metrics": {
+        "fp32": {
+            "accuracy": 0.9409340659340659,
+            "macro_f1": 0.9323095359049419
+        },
+        "fp16": {
+            "accuracy": 0.9409340659340659,
+            "macro_f1": 0.9316965688364075
+        }
+    },
+    "comparison": {
+        "accuracy_change_percentage_points": 0.0,
+        "macro_f1_change_percentage_points": -0.0613
+    }
+}
